@@ -1,0 +1,11 @@
+{
+  "name": "servo_puro",
+  "version": "1.0.0",
+  "description": "um servo baseado em node e só",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "moises antunes",
+  "license": "ISC"
+}
