@@ -3,25 +3,17 @@ var url = require('url');
 var fs = require('fs');
 var path = require('path');
 
-const servo =http.createServer(function (req, res) {
- // res.end();
-})
+const servo =http.createServer(function (req, res) {})
 servo.on('request',(req,res)=>{
-//const ps = fs.readdirSync("./paginas");
-//let pagina = "./paginas"+req.url;
-//console.log(pagina)
-//console.log(ps)
-
 	let pagina = './paginas' + req.url;
-	
-	    if (pagina == './paginas/') {
-	        pagina = './paginas/index.html';
-	    }else if(req.url == "/inverno"){
-	    	pagina = "./paginas/inverno.html"
-	    }
+	if (pagina == './paginas/') {
+		pagina = './paginas/index.html';
+	}else if(req.url == "/inverno"){
+		pagina = "./paginas/inverno.html"
+	}
 	console.log(pagina)
-	    var extensao = String(path.extname(pagina)).toLowerCase();
-	    var mimeTypes = {
+	var extensao = String(path.extname(pagina)).toLowerCase();
+	var mimeTypes = {
 	        '.html': 'text/html',
 	        '.js': 'text/javascript',
 	        '.css': 'text/css',
